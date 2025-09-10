@@ -8,9 +8,12 @@ video_capture = cv2.VideoCapture(<"sign">) - захватывает изобра
     prevTime = nowTime
 
 #image output to the screen - вывод изображения с количеством FPS на экран
-    cv2.putText(vid_gray, str(int(fps)), (0,70), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
+ 
+   cv2.putText(vid_gray, str(int(fps)), (0,70), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
+
     cv2.imshow('Video', vid_gray)
 
 #memory clear - очистка памяти после работы с камерой
+
     video_capture.release()
     cv2.destroyAllWindows()
